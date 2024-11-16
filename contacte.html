@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="contacte-body">
     <header>
         <nav class="header">
             <ul class="nav-links">
@@ -22,32 +22,21 @@
         </nav>
     </header>
     <div class="formulario">
-        <h2 class="text-center mb-4">Formulario de Contacto</h2>
+        <h2 class="h2-formulario">Formulario de Contacto</h2>
         <form>
    
             <div class="nombre">
                 <label for="nombre" class="form-label">Nombre</label>
                 <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre">
             </div>
-
-
-            <div class="correo"><br>
-                <label for="email" class="form-label">Correo Electrónico</label>
-                <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com">
-            </div>
-
-
-            <div class="asunto"><br>
-                <label for="asunto" class="form-label">Asunto</label>
-                <input type="text" class="form-control" id="asunto">
-
+        
             <div class="mensaje"><br>
                 <label for="mensaje" class="form-label">Mensaje</label>
-                <textarea class="form-control" id="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." ></textarea>
+                <textarea class="form-control" id="mensaje" rows="8" placeholder="Escribe tu mensaje aquí..." ></textarea>
             </div>
 
-
-            <button type="submit" class="btn btn-primary w-100">Enviar </button>
+            <br>
+            <button type="submit" class="btn btn-outline-light">Enviar </button>
         </form>
     </div>
 
