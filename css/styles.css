@@ -3,14 +3,25 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+/*Apartado responsive*/
+@media (min-width: 768px){
+    header{
+        padding: 10px;
+    }
+        
+    .image-button{
+        padding-top: 50px;
+    }
+}
 body {
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 /*Parte headers*/
 header {
     background-color: #000;
     padding: 20px;
+    margin:0;
+    width: 100%;
 }
 
 .navbar {
@@ -75,11 +86,18 @@ header {
     cursor: pointer;
 
 }
+.contenedor2{
+    background-color: #000;
+    color: #7d6640;
+
+}
 /*Pagina sobrenosotros*/
 .contenedor-sobrenosotros{
     background-color: black;
     color: #7d6640;
-    
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.8; /*Para el espacio entre lineas*/
 
 }
 .img-sobrenosotros img{
@@ -113,6 +131,30 @@ header {
 .contacte-body{
     background-color: #000;
 }
+.boton-contacto{
+    background-color: black;
+    color: #7d6640;
+    border: 2px solid ;
+    border-radius: 11px;
+    padding: 0.5 rem 1 rem;
+    font-size:18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3 ease, transform 0.2s ease;
+    margin: auto;
+
+}
+.boton-contacto:hover{
+    background-color: black;
+    color:#e7a437;
+    transform: scale(1.1);
+}
+.boton-contacto:active{
+    background-color: rgba(0, 0, 0, 0.616);
+}
+.boton-contacto:focus{
+    outline: none;
+}
 /*Pagina Mantenimiento*/
 .mantenimiento-body{
     background-color: black;
@@ -121,11 +163,13 @@ header {
     margin-left:120px;
     margin-right:120px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
+    gap:16px;
 }
 
 .card-content {
+    flex: 2 3 calc(19.33% - 16px);
     color:#7d6640;  
     width: 250px;
     margin: 20px;
@@ -134,6 +178,18 @@ header {
     text-align: center;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
 }
+.card-content:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+    border-color: #e7a437;
+    background-color: black;
+}
+.card-content:hover h3{
+    color: #e7a437;
+}
+.card-content:hover p{
+    color: #e7a437;
+}
 
 .card-content img {
     width: 100%;
@@ -141,3 +197,60 @@ header {
     color:#7d6640;
 
 }
+.contenedor-mantenimiento{
+    background-color: #000;
+    color: #7d6640;
+    font-size: 18px;
+    margin-left:120px;
+    margin-bottom: 20px;
+}
+.contenedor-mantenimiento h2{
+    text-align: center;
+    font-size:18px;
+
+}
+.formulario-mantenimiento{
+    padding:20px;
+}
+.nombre-mantenimiento{
+    color: #7d6640;
+    margin-left: 40px;
+    margin-right: 40px;
+
+
+}
+.mensaje-mantenimiento{
+    color:#7d6640;
+    margin-left: 40px;
+    margin-right: 40px;
+
+}
+.modelo{
+    color:#7d6640;
+    margin-left: 40px;
+    margin-right: 40px;
+
+}
+.boton-mantenimiento{   
+    background-color: black;
+    color: #7d6640;
+    border: 2px solid ;
+    border-radius: 11px;
+    padding: 0.5 rem 1 rem;
+    font-size:18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3 ease, transform 0.2s ease;
+    margin: auto;
+
+}
+
+.boton-mantenimiento:hover{
+    background-color: black;
+    color:#e7a437;
+    transform: scale(1.1);
+}
+.boton-mantenimiento:active{
+    background-color: rgba(0, 0, 0, 0.616);
+}
+
