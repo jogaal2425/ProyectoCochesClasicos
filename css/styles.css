@@ -106,6 +106,10 @@ header {
     display:block;
     height: auto;
 }
+.texto-sobrenosotros{
+    margin-right:40px;
+    margin-left:40px;
+}
 /*Pagina contacto*/
 .formulario{
     margin:auto;
@@ -206,7 +210,8 @@ header {
 }
 .contenedor-mantenimiento h2{
     text-align: center;
-    font-size:18px;
+    font-size:24px;
+    margin-right:70px;
 
 }
 .formulario-mantenimiento{
@@ -216,8 +221,6 @@ header {
     color: #7d6640;
     margin-left: 40px;
     margin-right: 40px;
-
-
 }
 .mensaje-mantenimiento{
     color:#7d6640;
@@ -242,6 +245,8 @@ header {
     cursor: pointer;
     transition: background-color 0.3 ease, transform 0.2s ease;
     margin: auto;
+    display: flex;
+    justify-content: center;
 
 }
 

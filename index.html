@@ -10,7 +10,9 @@
 </head>
 <body> 
     <script>
-        document.getElementById('button-acceder').addEventListener('onclick').location.href='mantenimiento.html'
+      function enviarFormulario(){
+      window.location.href='mantenimiento.html';//para funcionar el boton de accede y que lleve a la pagina mantenimiento
+      }
     </script>
     <header>
         <nav class="header">
@@ -26,16 +28,13 @@
     <div class="contenedor1">
         <div class="image-button">
             <p>Clásico, para los que saben</p>
-            <button href="mantenimiento.html" class="button-acceder" >Accede</button>
+            <button onclick="enviarFormulario()" class="button-acceder" >Accede</button>
         </div>
         <div>
             <img src="./images/coche-clasico-negro-dorado.jpg" class="img2" alt="">
         </div>
     </div>
-    <section class="contenedor2">
-        <h2>Líderes punteros en Mantenimiento de coches</h2>
-    </section>
-
+    
 
 </body>
 </html>
