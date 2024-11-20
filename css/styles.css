@@ -3,19 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
-/*Apartado responsive*/
-@media (min-width: 768px){
-    header{
-        padding: 10px;
-    }
-        
-    .image-button{
-        padding-top: 50px;
-    }
+/*Apartado de fuentes*/
+@font-face {
+    font-family: 'Varela Round';
+    src: url('../fonts/VarelaRound-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
 }
-body {
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
+
 /*Parte headers*/
 header {
     background-color: #000;
@@ -47,6 +42,10 @@ header {
     color: #e7a437;
 }
 /*Pagina inicio*/
+.body-inicio{
+    font-family:'Varela Round',sans-serif;
+    min-height: 100px;
+}
 
 .image-button {
     position: absolute;
@@ -60,15 +59,26 @@ header {
     color: #7d6640;
     text-align: center;
     padding-top:100px;
+    margin-bottom:80px
 }
 .img2{
     width: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: top;
 
+}
+.img3,.img4{
+    margin-left:40px
+}
+.imagen-texto p{
+    font-size:20px;
+    margin-left:120px;
 }
 .image-button p {
     font-size: 40px;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.7)
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
 }
 .image-button button:hover {
     color: #e7a437;
@@ -89,9 +99,89 @@ header {
 .contenedor2{
     background-color: #000;
     color: #7d6640;
+    text-align: left;
+    line-height: 1.8;
+    font-size: 16px;
+}
+.contenedor2 h2{
+    text-align: center;
+}
 
+/*Apartado inicio pagina responsive*/
+@media (max-width: 1024px) {
+    .image-button {
+        height: 600px;
+        padding-top: 50px;
+        margin-bottom:80px;
+  
+    }
+
+    .image-button p {
+        font-size: 30px;
+    }
+
+    .image-button button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+    
+}
+@media (max-width: 768px) {
+    .image-button {
+        height: 450px;
+        margin-bottom:80px;
+    }
+
+    .image-button p {
+        font-size: 24px;
+    }
+
+    .image-button button {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+}
+@media (max-width: 480px) {
+    .image-button {
+        height: auto; 
+        padding-top: 40px;
+        margin-bottom:80px;
+    }
+
+    .image-button p {
+        font-size: 20px;
+    }
+
+    .image-button button {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+
+    .footer-inicio {
+        padding: 10px;
+    }
+
+    .footer-links {
+        display: block;
+        text-align: center;
+    }
+
+    .footer-links li {
+        margin: 5px 0;
+    }
+    .img3,.img4{
+        width:40%;
+    }
+    .imagen-texto{
+        margin-left:80px;
+    }
 }
 /*Pagina sobrenosotros*/
+.body-sobrenosotros{
+    background-color: #000;
+    min-height: 100px;
+    font-family:'Varela Round',sans-serif
+}
 .contenedor-sobrenosotros{
     background-color: black;
     color: #7d6640;
@@ -111,41 +201,69 @@ header {
     margin-left:40px;
 }
 /*Pagina contacto*/
-.formulario{
-    margin:auto;
-    text-align: center;
+.formulario-contacte {
     background-color: black;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    font-size: 16px;
+
 }
+.h2-formulario {
+    margin-bottom: 20px;
+    text-align: center;
+    color:#7d6640;
+}
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #7d6640;
+}
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #7d6640;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
 .h2-formulario{
     color:#7d6640;
     margin-top: 40px;
 }
-.nombre{
+.nombre div {
+    color: #7d6640;
+    text-align: left;
+    
+}
+.mensaje div{
     color: #7d6640;
     text-align: left;
     margin-left: 300px;
     margin-right:300px;
 }
-.mensaje{
-    color: #7d6640;
-    text-align: left;
-    margin-left: 300px;
-    margin-right:300px;
-}
-.contacte-body{
+.body-contacto{
     background-color: #000;
+    font-family:'Varela Round',sans-serif
 }
 .boton-contacto{
     background-color: black;
     color: #7d6640;
     border: 2px solid ;
     border-radius: 11px;
-    padding: 0.5 rem 1 rem;
-    font-size:18px;
+    font-size: 14px;
+    padding: 8px 12px;
     font-weight: 500;
     cursor: pointer;
     transition: background-color 0.3 ease, transform 0.2s ease;
     margin: auto;
+    display: block;
+
 
 }
 .boton-contacto:hover{
@@ -162,6 +280,7 @@ header {
 /*Pagina Mantenimiento*/
 .mantenimiento-body{
     background-color: black;
+    font-family:'Varela Round',sans-serif
 }
 .carta-coche {
     margin-left:120px;
@@ -215,33 +334,31 @@ header {
 
 }
 .formulario-mantenimiento{
-    padding:20px;
+    background-color: black;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    text-align: left;
 }
-.nombre-mantenimiento{
+.nombre-mantenimiento,.mensaje-mantenimiento,.modelo{
     color: #7d6640;
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 0 20px;
+    margin-right: 0 20px;
 }
-.mensaje-mantenimiento{
-    color:#7d6640;
-    margin-left: 40px;
-    margin-right: 40px;
 
-}
-.modelo{
-    color:#7d6640;
-    margin-left: 40px;
-    margin-right: 40px;
-
-}
 .boton-mantenimiento{   
     background-color: black;
     color: #7d6640;
     border: 2px solid ;
     border-radius: 11px;
-    padding: 0.5 rem 1 rem;
-    font-size:18px;
+    font-size: 14px;
+    padding: 8px 12px;
+  
     font-weight: 500;
+    font-family: 'Varela Round';
     cursor: pointer;
     transition: background-color 0.3 ease, transform 0.2s ease;
     margin: auto;
@@ -258,4 +375,121 @@ header {
 .boton-mantenimiento:active{
     background-color: rgba(0, 0, 0, 0.616);
 }
+.form-control{
+    font-family:'Varela Round';
+    font-size: 16px;
+}
 
+@media (max-width: 768px) {
+    .carta-coche {
+        margin-left: 10px;
+        margin-right: 10px;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: center;
+    }
+    
+    .card-content {
+        flex: 1 1 100%; 
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .contenedor-mantenimiento {
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 16px;
+    }
+
+    .formulario-mantenimiento {
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    .form-control {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .footer-mantenimiento ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        gap: 10px;
+    }
+
+    .footer-links li {
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 1024px) {
+    .carta-coche {
+        margin-left: 20px;
+        margin-right: 20px;
+        gap: 12px;
+    }
+
+    .card-content {
+        flex: 1 1 calc(48% - 16px); 
+        margin: 10px;
+    }
+
+    .contenedor-mantenimiento {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .formulario-mantenimiento {
+        padding: 15px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .image-button p {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    .contenedor-mantenimiento{
+        text-align: center;
+    }
+    .contenedor-mantenimiento h2{
+        margin:auto;
+    }
+    
+
+    .card-content img {
+        height: 150px; 
+    }
+
+    .formulario-mantenimiento h2{
+        font-size: 90px;
+    }    
+
+    .formulario-mantenimiento {
+        padding: 8px;
+    }
+
+    .form-control {
+        font-size: 12px;
+    }
+    
+}
+/*Parte footer*/
+footer {
+    background-color: black;
+    color: #7d6640;
+    text-align: center;
+    padding: 20px;
+    
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+ 
