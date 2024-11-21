@@ -56,10 +56,10 @@ header {
     justify-content: center;
     align-items: center;
     z-index:1;
-    color: #7d6640;
+    color: white;
     text-align: center;
     padding-top:100px;
-    margin-bottom:80px
+    margin-bottom:80px;
 }
 .img2{
     width: 100%;
@@ -200,6 +200,18 @@ header {
     margin-right:40px;
     margin-left:40px;
 }
+/*Parte responsive de la página sobrenosotros*/
+@media(max-width:768px){
+    .img-sobrenosotros img{
+        width: 100%;
+        object-fit: cover;
+        margin: auto;
+    }
+    .contenedor-sobrenosotros{
+        margin: auto;
+        text-align: left;
+    }
+}
 /*Pagina contacto*/
 .formulario-contacte {
     background-color: black;
@@ -289,10 +301,10 @@ header {
     justify-content: center;
     flex-wrap: wrap;
     gap:16px;
+    object-fit: cover;
 }
 
 .card-content {
-    flex: 2 3 calc(19.33% - 16px);
     color:#7d6640;  
     width: 250px;
     margin: 20px;
@@ -300,6 +312,7 @@ header {
     border-radius: 3px ;
     text-align: center;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
 }
 .card-content:hover{
     transform: translateY(-10px);
@@ -356,7 +369,6 @@ header {
     border-radius: 11px;
     font-size: 14px;
     padding: 8px 12px;
-  
     font-weight: 500;
     font-family: 'Varela Round';
     cursor: pointer;
@@ -379,104 +391,83 @@ header {
     font-family:'Varela Round';
     font-size: 16px;
 }
+/*Parte responsive de la página Mantenimiento*/
+    @media (max-width: 768px) {
+        .carta-coche {
+            flex-direction: column;
+            margin: 0 10px;
+            object-fit: cover;
+        }
 
-@media (max-width: 768px) {
-    .carta-coche {
-        margin-left: 10px;
-        margin-right: 10px;
-        flex-wrap: wrap;
-        gap: 8px;
-        justify-content: center;
-    }
-    
-    .card-content {
-        flex: 1 1 100%; 
-        width: 90%;
-        margin: 10px auto;
-    }
+        .card-content {
+            width: 100%;
+            margin: 10px 0;
+        }
 
-    .contenedor-mantenimiento {
-        margin-left: 10px;
-        margin-right: 10px;
-        font-size: 16px;
-    }
+        .contenedor-mantenimiento {
+            margin: 0 10px;
+            font-size: 16px;
+        }
 
-    .formulario-mantenimiento {
-        padding: 10px;
-        max-width: 100%;
-    }
+        .formulario-mantenimiento {
+            width: 100%;
+            padding: 10px;
+        }
 
-    .form-control {
-        font-size: 14px;
-        padding: 8px;
+        .nombre-mantenimiento, .mensaje-mantenimiento, .modelo {
+            margin: 10px 0;
+        }
     }
 
-    .footer-mantenimiento ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0;
-        margin: 0;
-        gap: 10px;
-    }
-
-    .footer-links li {
-        margin: 5px 0;
-    }
-}
 
 @media (max-width: 1024px) {
     .carta-coche {
-        margin-left: 20px;
-        margin-right: 20px;
-        gap: 12px;
+        gap: 10px;
+        margin: 20px;
     }
 
     .card-content {
-        flex: 1 1 calc(48% - 16px); 
-        margin: 10px;
+        width: 50%;
+    }
+
+    .contenedor-mantenimiento h2 {
+        font-size: 20px;
     }
 
     .contenedor-mantenimiento {
-        margin-left: 20px;
-        margin-right: 20px;
+        margin: 0 20px;
     }
 
     .formulario-mantenimiento {
+        max-width: 600px;
         padding: 15px;
     }
 }
 
 
 @media (max-width: 480px) {
-    .image-button p {
-        font-size: 24px;
-        margin-bottom: 10px;
+    .carta-coche {
+        flex-direction: column;
+        object-fit: cover;
     }
-    .contenedor-mantenimiento{
-        text-align: center;
-    }
-    .contenedor-mantenimiento h2{
-        margin:auto;
-    }
-    
 
     .card-content img {
-        height: 150px; 
+        height: auto;
     }
 
-    .formulario-mantenimiento h2{
-        font-size: 90px;
-    }    
+    .contenedor-mantenimiento h2 {
+        font-size: 18px;
+    }
 
     .formulario-mantenimiento {
-        padding: 8px;
+        padding: 10px;
+        font-size: 14px;
     }
 
-    .form-control {
+    .boton-mantenimiento {
         font-size: 12px;
+        padding: 5px 10px;
     }
-    
 }
 /*Parte footer*/
 footer {
